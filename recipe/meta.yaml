@@ -1,4 +1,4 @@
-{% set version = "0.1.21" %}
+{% set version = "0.1.22" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/yyjsonr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/yyjsonr/yyjsonr_{{ version }}.tar.gz
-  sha256: 7e95d6e142d696edd01167be0b45d66b1dd692048d0a1af0dccc16220f606895
+  sha256: ca2c68e0c1589e536bb76aac8235a75d90bde82e32e3367a321a12731fa48b8e
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,8 +48,8 @@ about:
   home: https://github.com/coolbutuseless/yyjsonr
   doc_url: https://coolbutuseless.github.io/package/yyjsonr/
   license: MIT
-  summary: A fast 'JSON' parser, generator and validator which converts 'JSON', 'NDJSON' (Newline Delimited 'JSON') and 'GeoJSON' (Geographic 'JSON') data to/from R objects. The standard R data types are supported (e.g. logical, numeric, integer) with configurable handling of NULL and NA values. Data frames, atomic vectors
-    and lists are all supported as data containers translated to/from 'JSON'. 'GeoJSON' data is read in as 'simple features' objects. This implementation wraps the 'yyjson' 'C' library which is available from <https://github.com/ibireme/yyjson>.
+  summary: A fast 'JSON' parser, generator and validator which converts 'JSON', 'NDJSON' (Newline Delimited 'JSON') and 'GeoJSON' (Geographic 'JSON') data to/from R objects. The standard R data types are supported (e.g. logical, numeric, integer) with configurable handling of NULL and NA values. Data frames, atomic 
+    vectors and lists are all supported as data containers translated to/from 'JSON'. 'GeoJSON' data is read in as 'simple features' objects. This implementation wraps the 'yyjson' 'C' library which is available from <https://github.com/ibireme/yyjson>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
